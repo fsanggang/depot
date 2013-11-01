@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Cuteorsad::Application.load_tasks
+Depot::Application.load_tasks
