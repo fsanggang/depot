@@ -1,28 +1,18 @@
 <h1>Listing products</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th>Price</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
+<table class="table">
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= product.title %></td>
-        <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
+        <td><%= image_tag(product.image_url) %></td>
+        <td>
+          <p class="title"><%= product.title %></p>
+          <p class="description"><%= truncate(strip_tags(product.description), length: 200) %></p>
+        </td>
         <td><%= product.price %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "Show", product %></td>
+        <td><%= link_to "Edit", edit_product_path(product) %></td>
+        <td><%= link_to "Destroy", product, method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +20,4 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to "New Product", new_product_path %>
