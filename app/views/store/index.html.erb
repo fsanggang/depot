@@ -6,7 +6,7 @@
           <h3><%= truncate(product.title, length: 24) %></h3>
           <%= image_tag(product.image_url, class: "center-block product-image") %>
           <p><%= sanitize(product.description.truncate(100)) %></p>
-          <p><%= product.price %></p>
+          <p><%= number_to_currency(product.price) %></p>
         </div>
       <% end %>
     <% end %>

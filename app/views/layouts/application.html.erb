@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>Depot</title>
+    <title><%= @page_title or "Pragmatic Bookshelf" %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -31,7 +31,7 @@
 
         <nav class="collapse navbar-collapse" id="navbar">
           <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
+            <li><%= link_to("Home", root_path) %></li>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">News</a></li>
             <li><a href="#">Contact</a></li>

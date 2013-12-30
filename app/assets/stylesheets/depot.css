@@ -1,5 +1,6 @@
 .navbar { background: #9c9; }
 .navbar-brand { padding: 7px 15px; }
+.navbar-default .navbar-nav > li > a { color: #fff; }
 
 #main { margin-top: 75px; }
 
